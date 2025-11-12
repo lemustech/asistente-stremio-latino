@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Metadatos SEO Esenciales -->
+    <title>🚀 Asistente Stremio 2025 - Configuración PRO para Latinos</title>
+    <meta name="description" content="🎬 La herramienta definitiva para instalar y configurar Stremio. Elige tu modo (Estándar o PRO) e instala los 28 mejores addons para latinos en 4 pasos.">
+    <meta property="og:title" content="🚀 Asistente Stremio 2025 - Configuración PRO">
+    <meta property="og:description" content="🎬 La herramienta definitiva para instalar y configurar Stremio. Elige tu modo (Estándar o PRO) e instala los 28 mejores addons para latinos en 4 pasos.">
+    <meta property="og:image" content="https://placehold.co/1200x630/764ba2/ffffff?text=Asistente+Stremio+2025">
+    <meta property="og:url" content="http://lemustech.net/stremio/index.html"> <!-- Actualiza esto si usas un nuevo dominio -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Tipografía Profesional -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* --- MODO CLARO IMPACTANTE --- */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { 
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+    /* Fondo degradado sutil */
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf3 100%);
+    min-height:100vh; 
+    display:flex; 
+    justify-content:center; 
+    align-items:flex-start; 
+    padding:20px; 
+    color:#2D3748; /* Texto oscuro principal */
+}
+main { 
+    background: #FFFFFF; /* Contenedor blanco */
+    border-radius:16px; 
+    padding:25px 30px; 
+    max-width:850px; 
+    width:100%; 
+    /* Sombra más pronunciada para efecto "flotante" */
+    box-shadow:0 25px 50px -12px rgba(0,0,0,0.15), 0 8px 10px -6px rgba(0,0,0,0.1);
+    margin: 20px 0;
+    border: 1px solid #E2E8F0;
+}
+header { text-align:center; margin-bottom:25px; }
+header h1 { 
+    color: #667eea; /* Acento índigo */
+    font-size:26px; 
+    margin-bottom:5px; 
+    font-weight:700;
+}
+header p { color:#718096; font-size:14px; } /* Gris medio */
+
+/* --- Estructura de Pasos --- */
+.step {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #E2E8F0; /* Borde claro */
+    padding-bottom: 25px;
+}
+.step:last-child { border-bottom: none; padding-bottom: 10px; }
+.step-title {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1A202C; /* Texto oscuro */
+    margin-bottom: 15px;
+}
+.step-title span {
+    background-color: #667eea; /* Acento índigo */
+    color: white;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+/* --- Paso 1 (AuthKey Input) --- */
+.auth-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    background-color: #F7FAFC; /* Fondo de input claro */
+    border: 1px solid #CBD5E0; /* Borde de input */
+    border-radius: 8px;
+    color: #1A202C; /* Texto oscuro */
+    margin-bottom: 10px;
+}
+.auth-input::placeholder {
+    color: #A0AEC0; /* Placeholder gris */
+}
+.auth-guide details {
+    font-size: 12px;
+    color: #718096; /* Texto gris */
+}
+.auth-guide summary {
+    cursor: pointer;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.auth-guide ol {
+    padding-left: 20px;
+    margin-top: 5px;
+    line-height: 1.5;
+}
+.auth-guide code {
+    background-color: #E2E8F0; /* Fondo de código claro */
+    color: #2D3748;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+/* --- Lógica Híbrida (Desktop/Mobile) --- */
+.mobile-only { display: none; }
+.desktop-only { display: block; }
+
+/* --- Modos --- */
+.mode-selector {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.mode-btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #E2E8F0; /* Borde claro */
+    background-color: #F7FAFC; /* Fondo claro */
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s;
+}
+.mode-btn:hover {
+    border-color: #CBD5E0;
+}
+.mode-btn.active {
+    border-color: #667eea; /* Acento índigo */
+    background-color: #F0F5FF; /* Fondo de acento muy claro */
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.1);
+}
+.mode-btn .title {
+    font-weight: 600;
+    font-size: 15px;
+    color: #2D3748; /* Texto oscuro */
+}
+.mode-btn.active .title {
+    color: #5a6ed0;
+}
+.mode-btn .desc {
+    font-size: 12px;
+    color: #718096; /* Texto gris */
+}
+
+/* --- Pestañas (Nav semántico) --- */
+.tabs { display:flex; gap:10px; margin-bottom:20px; border-bottom:2px solid #E2E8F0; }
+.tab-btn { 
+    padding:10px 15px; 
+    background:none; 
+    border:none; 
+    cursor:pointer; 
+    font-weight:600; 
+    color: #718096; /* Gris medio */
+    font-size: 14px;
+    border-bottom:3px solid transparent; 
+    transition:all 0.3s; 
+}
+.tab-btn.active { color:#667eea; border-bottom-color:#667eea; } /* Acento índigo */
+.tab { display:none; }
+.tab.active { display:block; }
+h3.addon-category { 
+    color: #4A5568;
+    font-size:14px; 
+    margin:20px 0 10px; 
+    font-weight: 600;
+    border-bottom: 1px solid #E2E8F0;
+    padding-bottom: 5px;
+}
+
+/* --- Addon Item --- */
+.addon { 
+    background: #FFFFFF; /* Fondo blanco */
+    border: 1px solid #E2E8F0;
+    padding:12px; 
+    margin:10px 0; 
+    border-left:4px solid #667eea; /* Acento índigo */
+    border-radius:4px; 
+    display:flex; 
+    gap:12px; 
+    align-items:flex-start;
+    transition: all 0.2s;
+}
+.addon:hover {
+    background-color: #F7FAFC; /* Hover más claro */
+    transform: scale(1.015);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.addon input[type="checkbox"] { 
+    width:18px; 
+    height:18px; 
+    cursor:pointer; 
+    margin-top:2px; 
+    flex-shrink: 0;
+}
+.addon.disabled {
+    opacity: 0.6;
+    border-left-color: #A0AEC0;
+}
+.addon.disabled:hover {
+    transform: none;
+    background-color: #FFFFFF;
+    box-shadow: none;
+}
+.addon.disabled .addon-name {
+    text-decoration: line-through;
+}
+.addon.disabled input[type="checkbox"] {
+    cursor: not-allowed;
+}
+.addon-info { flex:1; }
+.addon-name { 
+    font-weight:600; 
+    color: #2D3748; /* Texto oscuro */
+    font-size:14px; 
+    margin-bottom:4px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Estrellas (restauradas) */
+.addon-name span {
+    font-size: 11px;
+    color: #A0AEC0;
+}
+
+.addon-name .config-link {
+    font-size: 12px;
+    font-weight: 500;
+    color: #667eea; /* Acento índigo */
+    text-decoration: none;
+    margin-left: 5px;
+}
+.addon-name .config-link:hover { text-decoration: underline; }
+
+.addon-desc { 
+    color: #718096; /* Texto gris */
+    font-size:12px; 
+    line-height:1.4; 
+}
+.addon-desc .note {
+    color: #DD6B20; /* Naranja para notas */
+    font-weight: 500;
+}
+.pro-addon-only {
+    display: none;
+}
+
+/* --- Botones --- */
+.buttons { display:flex; flex-wrap: wrap; gap:10px; margin-top:20px; }
+button { 
+    padding:12px 15px; 
+    border:none; 
+    border-radius:8px; 
+    font-weight:bold; 
+    cursor:pointer; 
+    font-size:13px; 
+    transition:all 0.3s; 
+    flex: 1 1 auto;
+}
+.install-btn { 
+    background:linear-gradient(135deg, #667eea, #a78bfa); /* Gradiente de acento */
+    color:white; 
+    flex-grow: 2;
+    animation: pulse 2s infinite;
+}
+.install-btn:hover { 
+    transform:translateY(-2px); 
+    box-shadow:0 8px 20px rgba(102, 126, 234, 0.4);
+    animation: none;
+}
+.select-all-btn { background-color: #38A169; color: white; } /* Verde */
+.select-none-btn { background-color: #E53E3E; color: white; } /* Rojo */
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(102, 126, 234, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0); }
+}
+
+/* --- Guías y Status --- */
+.guide-toggle {
+    background-color: #F7FAFC;
+    border: 1px solid #E2E8F0;
+    color: #4A5568;
+    border-radius: 8px;
+    padding: 12px 15px;
+    width: 100%;
+    text-align: left;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.2s;
+}
+.guide-toggle:hover {
+    background-color: #EDF2F7;
+}
+.guide-toggle.active {
+    background-color: #667eea;
+    border-color: #667eea;
+    color: white;
+}
+.guide-content {
+    display: none;
+    padding: 15px;
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+.guide-content h4 {
+    color: #667eea; /* Acento índigo */
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.guide-content p { margin-bottom: 10px; color: #4A5568; }
+.guide-content ul { padding-left: 20px; margin-bottom: 10px; color: #4A5568; }
+.guide-content code {
+    background-color: #E2E8F0;
+    color: #2D3748;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+.guide-content .warning {
+    background-color: #FFFBEB;
+    border: 1px solid #F6E05E;
+    padding: 10px;
+    border-radius: 6px;
+    color: #B7791F;
+}
+.guide-content .pro-tip {
+    background-color: #EBF4FF;
+    border: 1px solid #90CDF4;
+    padding: 10px;
+    border-radius: 6px;
+    color: #2C5282;
+}
+.pro-link {
+    display: inline-block;
+    padding: 8px 12px;
+    background: #667eea;
+    color: white !important;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    margin-top: 5px;
+    transition: background-color 0.2s;
+}
+.pro-link:hover { background: #5a6ed0; }
+
+.status { 
+    padding:12px; 
+    border-radius:6px; 
+    margin-top:15px; 
+    text-align:center; 
+    display:none; 
+    font-size:13px; 
+    font-weight: 500;
+}
+.status.info { background:#EBF4FF; color:#2C5282; border:1px solid #90CDF4; display:block; }
+.status.success { background:#F0FFF4; color:#2F855A; border:1px solid #9AE6B4; display:block; }
+.status.error { background:#FFF5F5; color:#C53030; border:1px solid #FEB2B2; display:block; }
+
+
+@media (max-width: 768px) { /* Límite de responsive para móvil/tablet */
+    body { padding: 0; background: #FFFFFF; } /* Fondo blanco sólido en móvil */
+    main { padding: 20px 15px; border-radius: 0; min-height: 100vh; margin: 0; border: none; box-shadow: none; }
+    header h1 { font-size: 22px; }
+    .tabs { gap: 5px; }
+    .tab-btn { padding: 10px 8px; font-size: 13px; }
+    .buttons { flex-direction: column; }
+    
+    /* Lógica Híbrida: Ocultar/Mostrar elementos */
+    .mobile-only { display: block; }
+    .desktop-only { display: none; }
+}
+
+/* --- Footer semántico --- */
+footer {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #E2E8F0;
+    font-size: 12px;
+    color: #A0AEC0;
+}
+footer p { margin: 0; }
+footer a {
+    color: #667eea; /* Acento índigo */
+    text-decoration: none;
+    font-weight: 600;
+}
+footer a:hover { text-decoration: underline; }
+
+</style>
+</head>
+<body>
+
+<main class="container">
+    
+    <header class="header">
+        <h1>🚀 Asistente Stremio 2025</h1>
+        <p>Configuración PRO. Hecho con ❤️ en Caracas - Venezuela</p>
+    </header>
+
+    <!-- PASO 1 (HÍBRIDO) -->
+    <!-- PASO 1: CONECTAR (Solo Desktop) -->
+    <section class="step desktop-only" id="step1-desktop">
+        <h2 class="step-title"><span>1</span>Conecta tu Cuenta de Stremio</h2>
+        <p style="font-size: 13px; color: #718096; margin-bottom: 15px;">Para instalar addons sin ventanas emergentes, necesitamos tu Clave de Autenticación (AuthKey).</p>
+        <input type="password" id="authKeyInput" class="auth-input" placeholder="Pega tu AuthKey aquí (ej. stremio_...">
+        
+        <div class="auth-guide">
+            <details>
+                <summary>¿Cómo obtengo mi AuthKey? (Es seguro)</summary>
+                <ol>
+                    <li>Abre Stremio en tu navegador: <a href="https://app.strem.io" target="_blank" rel="noopener noreferrer">https://app.strem.io</a></li>
+                    <li>Inicia sesión en tu cuenta.</li>
+                    <li>Presiona <strong>F12</strong> para abrir las "Herramientas de desarrollador".</li>
+                    <li>Ve a la pestaña <strong>"Consola" (Console)</strong>.</li>
+                    <li>Escribe o pega el siguiente comando: <code>copy(localStorage.getItem('authKey'))</code> y presiona Enter.</li>
+                    <li>Tu AuthKey se copiará a tu portapapeles. Pégala arriba.</li>
+                </ol>
+            </details>
+        </div>
+    </section>
+
+    <!-- PASO 1: AVISO (Solo Móvil) -->
+    <section class="step mobile-only" id="step1-mobile">
+        <h2 class="step-title"><span>1</span>Aviso de Instalación Móvil</h2>
+        <div class="guide-content" style="display: block; background-color: #F7FAFC;">
+            <p>¡Hola! Detectamos que estás en un dispositivo móvil.</p>
+            <p>El método de instalación en móviles usa **ventanas emergentes (pop-ups)**.</p>
+            <p>Cuando presiones "INSTALAR", tu navegador las bloqueará. Por favor, busca la notificación (usualmente en la barra de direcciones o al fondo) y presiona **"Permitir Siempre"** o **"Mostrar"** para completar la instalación.</p>
+        </div>
+    </section>
+
+    <!-- PASO 2: MODO -->
+    <section class="step">
+        <h2 class="step-title"><span>2</span>Elige tu tipo de configuración</h2>
+        
+        <div class="mode-selector">
+            <button class="mode-btn active" id="mode-std">
+                <div class="title">🛡️ Configuración Estándar (P2P)</div>
+                <div class="desc">Recomendado. Usa addons públicos (P2P). No requiere cuentas de pago.</div>
+            </button>
+            <button class="mode-btn" id="mode-pro">
+                <div class="title">⚡ Configuración PRO (Debrid)</div>
+                <div class="desc">Velocidad extrema. Requiere servicio de pago (Real-Debrid, TorBox, etc.).</div>
+            </button>
+        </div>
+    </section>
+
+    <!-- PASO 3: ADDONS -->
+    <section class="step">
+        <h2 class="step-title" id="step-3-title"><span>3</span>Selecciona los Addons</h2>
+        
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="0">🎥 Contenido</button>
+            <button class="tab-btn" data-tab="1">📊 Metadatos</button>
+            <button class="tab-btn" data-tab="2">📝 Subtítulos</button>
+        </nav>
+
+        <!-- Pestaña 1: Contenido -->
+        <div id="tab0" class="tab active">
+            <h3 class="addon-category">Enlaces de Video (Streaming)</h3>
+            <div class="addon"><input type="checkbox" data-url-index="0"><div class="addon-info"><div class="addon-name">⭐⭐⭐ Torrentio <a href="https://torrentio.strem.fun/configure" class="config-link" target="_blank" rel="noopener noreferrer">(Configurar)</a></div><div class="addon-desc">El mejor. Múltiples fuentes. <span class="note">Necesita configuración para Modo PRO.</span></div></div></div>
+            <div class="addon"><input type="checkbox" data-url-index="1" class="p2p-addon"><div class="addon-info"><div class="addon-name">⭐⭐ Comet</div><div class="addon-desc">El más rápido para torrents públicos (P2P).</div></div></div>
+            <div class="addon"><input type="checkbox" data-url-index="2"><div class="addon-info"><div class="addon-name">⭐⭐ MediaFusion <a href="https://mediafusion.elfhosted.com/configure" class="config-link" target="_blank" rel="noopener noreferrer">(Configurar)</a></div><div class="addon-desc">Versátil: películas, series, TV, deportes. <span class="note">Recomendado para Debrid.</span></div></div></div>
+            <div class="addon"><input type="checkbox" data-url-index="3" class="p2p-addon"><div class="addon-info"><div class="addon-name">The Pirate Bay+</div><div class="addon-desc">Clásico confiable. Amplio catálogo P2P.</div></div></div>
+            <div class="addon"><input type="checkbox" data-url-index="4" class="p2p-addon"><div class="addon-info"><div class="addon-name">Nuvio Streams</div><div class="addon-desc">Enlaces HTTP (sin torrents) de calidad.</div></div></div>
+            <div class="addon"><input type="checkbox" data-url-index="5" class="p2p-addon"><div class="addon-info"><div class="addon-name">Peerflix</div><div class="addon-desc">Otro motor P2P rápido y confiable.</div></div></div>
+            <div class="addon"><input type="checkbox" data-url-index="6" class="p2p-addon"><div class="addon-info"><div class="addon-name">WebStreamrr</div><div class="addon-desc">Buena alternativa para enlaces P2P.</div></div></div>
+            <div class="addon"><input type="checkbox" data-url-index="26" class="p2p-addon"><div class="addon-info"><div class="addon-name">Jam-Packed</div><div class="addon-desc">Agregador de enlaces HTTP (sin torrents).</div></div></div>
+            <div class="addon pro-addon-only" id="debridio-addon"><input type="checkbox" data-url-index="23"><div class="addon-info"><div class="addon-name">⭐⭐ Debridio <a href="https://debridio.com/configure" class="config-link" target="_blank" rel="noopener noreferrer">(Configurar)</a></div><div class="addon-desc">Alternativa a Torrentio. Rápida. <span class="note">Exclusivo para Debrid (Modo PRO).</span></div></div></div>
+
+            <h3 class="addon-category">Contenido Adicional</h3>
+            <div class="addon"><input type="checkbox" data-url-index="7"><div class="addon-info"><div class="addon-name">YouTube (Oficial)</div><div class="addon-desc">Busca y mira videos de YouTube en Stremio.</div></div></div>
+            <div class="addon"><input type="checkbox" data-url-index="8"><div class="addon-info"><div class="addon-name">Public Domain Movies (Oficial)</div><div class="addon-desc">Películas 100% legales de dominio público.</div></div></div>
+            <div class="addon"><input type="checkbox" data-url-index="9"><div class="addon-info"><div class="addon-name">Pimpus (IPTV)</div><div class="addon-desc">Canales de TV en vivo (IPTV).</div></div></div>
+            <div class="addon"><input type="checkbox" data-url-index="10"><div class="addon-info"><div class="addon-name">Watchio TV (IPTV)</div><div class="addon-desc">Excelente alternativa de canales de TV en vivo.</div></div></div>
+        </div>
+
+        <!-- Pestaña 2: Metadatos -->
+        <div id="tab1" class="tab">
+            <h3 class="addon-category">Catálogos Principales</h3>
+            <div class="addon"><input type="checkbox" data-url-index="11"><div class="addon-info"><div class="addon-name">⭐ The Movie Database (TMDB)</div><div class="addon-desc">Información completa, favoritos, calificaciones.</div></div></div>
+            <div class="addon"><input type="checkbox" data-url-index="12"><div class="addon-info"><div class="addon-name">⭐⭐⭐ Trakt TV <a href="https://trakt.strem.fun/configure" class="config-link" target="_blank" rel="noopener noreferrer">(Configurar)</a></div><div class="addon-desc">Sincroniza historial y listas. <span class="note">Necesita configuración.</span></div></div></div>
+            <div class="addon"><input type="checkbox" data-url-index="13"><div class="addon-info"><div class="addon-name">⭐ Ratings Aggregator</div><div class="addon-desc">Muestra notas de IMDb, TMDb, Metacritic en un lugar.</div></div></div>
+            
+            <h3 class="addon-category">Catálogos Específicos</h3>
+            <div class="addon"><input type="checkbox" data-url-index="14"><div class="addon-info"><div class="addon-name">Kitsu Anime Catalog</div><div class="addon-desc">El mejor catálogo para organizar Anime (series y OVAS).</div></div></div>
+            <div class="addon"><input type="checkbox" data-url-index="15"><div class="addon-info"><div class="addon-name">AIOLists <a href="https://aiolists.strem.fun/configure" class="config-link" target="_blank" rel="noopener noreferrer">(Configurar)</a></div><div class="addon-desc">Importa listas de Trakt, IMDb y Letterboxd.</div></div></div>
+            <div class="addon"><input type="checkbox" data-url-index="16"><div class="addon-info"><div class="addon-name">Streaming Catalogs</div><div class="addon-desc">Catálogos de Netflix, HBO Max, Disney+, etc.</div></div></div>
+            <div class="addon"><input type="checkbox" data-url-index="27"><div class="addon-info"><div class="addon-name">Cyberflix Catalog</div><div class="addon-desc">Añade docenas de listas (Top, Géneros) a "Descubrir".</div></div></div>
+            <div class="addon"><input type="checkbox" data-url-index="17"><div class="addon-info"><div class="addon-name">More Like This</div><div class="addon-desc">Recomendaciones personalizadas ("Más como esto...").</div></div></div>
+            
+            <h3 class="addon-category">Catálogos Oficiales (Utilidad)</h3>
+            <div class="addon"><input type="checkbox" data-url-index="24"><div class="addon-info"><div class="addon-name">Trailers (Oficial)</div><div class="addon-desc">Añade un botón de "Tráiler" a la información del contenido.</div></div></div>
+            <div class="addon"><input type="checkbox" data-url-index="25"><div class="addon-info"><div class="addon-name">Documentaries (Oficial)</div><div class="addon-desc">Añade un catálogo de documentales.</div></div></div>
+        </div>
+
+        <!-- Pestaña 3: Subtítulos -->
+        <div id="tab2" class="tab">
+            <h3 class="addon-category">Subtítulos en Español</h3>
+            <div class="addon"><input type="checkbox" data-url-index="18"><div class="addon-info"><div class="addon-name">⭐⭐⭐ OpenSubtitles PRO <a href="https://opensubtitles-pro.stremio-addon.com/configure" class="config-link" target="_blank" rel="noopener noreferrer">(Configurar)</a></div><div class="addon-desc">Sin publicidad. Calidad en español. <span class="note">Requiere cuenta gratuita.</span></div></div></div>
+            <div class="addon"><input type="checkbox" data-url-index="19"><div class="addon-info"><div class="addon-name">⭐ SubSource Subtitles</div><div class="addon-desc">Excelente alternativa. Subtítulos en español e inglés.</div></div></div>
+            <div class="addon"><input type="checkbox" data-url-index="20"><div class="addon-info"><div class="addon-name">MSubtitles</div><div class="addon-desc">Gestor de subtítulos gratuito español/inglés.</div></div></div>
+            <div class="addon"><input type="checkbox" data-url-index="21"><div class="addon-info"><div class="addon-name">SubDL Subtitles</div><div class="addon-desc">Subtítulos en español y otros idiomas.</div></div></div>
+            <div class="addon"><input type="checkbox" data-url-index="22"><div class="addon-info"><div class="addon-name">Local Subtitles (Oficial)</div><div class="addon-desc">Permite arrastrar un archivo <code>.srt</code> a Stremio.</div></div></div>
+        </div>
+
+        <div class="buttons">
+            <button class="install-btn" id="install-btn">⚡ SINCRONIZAR AHORA</button>
+            <button class="select-all-btn" id="select-all-btn">✅ SELECCIONAR TODO</button>
+            <button class="select-none-btn" id="select-none-btn">❌ DESELECCIONAR TODO</button>
+        </div>
+
+        <div id="status" class="status"></div>
+    </section>
+
+    <!-- PASO 4: GUÍA -->
+    <section class="step">
+        <h2 class="step-title"><span>4</span>Guías de Configuración (¡Importante!)</h2>
+        
+        <button class="guide-toggle" id="guide-toggle-main">📖 Guía de Configuración Sugerida (Ocultar/Mostrar)</button>
+        <div class="guide-content" id="guide-content-main">
+            <!-- Contenido Estándar (por defecto) -->
+            <div id="guide-std">
+                <h4>🛡️ Configuración Estándar (P2P)</h4>
+                <p>Este modo es gratuito y usa addons públicos (P2P). Para la mejor experiencia, asegúrate de:</p>
+                <ol>
+                    <li>Instalar <strong>todos</strong> los addons de Contenido (Torrentio, Comet, MediaFusion, Nuvio, etc.).</li>
+                    <li>Configurar <strong>OpenSubtitles PRO</strong> y <strong>Trakt TV</strong> (ver guía abajo).</li>
+                </ol>
+                <p>El ancho de banda necesario depende de la calidad del torrent:</p>
+                <ul>
+                    <li><strong>1080p (Alta Calidad):</strong> Requiere <strong>20-25 Mbps</strong> de bajada estables.</li>
+                    <li><strong>4K (UHD):</strong> Es <strong>muy difícil</strong> en modo P2P. Requiere <strong>50-100+ Mbps</strong> y muchos "seeders" (pares).</li>
+                </ul>
+
+                <div class="pro-tip">
+                    <h4>Paso PRO Opcional: Exprime el potencial</h4>
+                    <p>Esta herramienta funciona gratis, pero si quieres <strong>eliminar el buffering</strong> y ver 4K sin interrupciones, te recomendamos un servicio de pago como <strong>Real-Debrid</strong>.</p>
+                    <p>Si tienes uno, ¡activa el "Modo PRO" arriba para ver la guía de configuración!</p>
+                </div>
+            </div>
+            
+            <!-- Contenido PRO (oculto por defecto) -->
+            <div id="guide-pro" style="display: none;">
+                <h4>⚡ Configuración PRO (Debrid)</h4>
+                <p>¡Esta es la mejor forma de usar Stremio! El "Modo PRO" desactiva los addons P2P y usa solo los que se conectan a tu servicio de Debrid (como Real-Debrid, TorBox, Easynews, etc.).</p>
+                <p><strong>Ventajas:</strong> Velocidad máxima, 0 buffering, enlaces 4K instantáneos y 100% privado (tu IP está oculta).</p>
+                
+                <h4>Instrucciones PRO:</h4>
+                <p><strong>IMPORTANTE:</strong> ANTES de Sincronizar/Instalar, debes configurar los addons que usarás. Los addons que requieren configuración (Torrentio, MediaFusion, Debridio) **no se instalarán**; en su lugar, se abrirá su página de configuración para que pegues tus API Keys.</p>
+                <ol>
+                    <li>
+                        <strong>Configura Torrentio (Requerido):</strong>
+                        <ul>
+                            <li>Haz clic en <code>(Configurar)</code> al lado de Torrentio.</li>
+                            <li>Baja a "Debrid Service" y selecciona tu proveedor (ej. <strong>Real-Debrid</strong>).</li>
+                            <li>Pega tu <strong>API Key</strong> de Debrid en el campo y haz clic en "Install".</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Configura los demás (Opcional pero recomendado):</strong>
+                        <ul>
+                            <li>Haz lo mismo para <strong>MediaFusion</strong>, <strong>Debridio</strong>, <strong>OpenSubtitles</strong> y <strong>Trakt TV</strong>.</li>
+                        </ul>
+                    </li>
+                    <li>Una vez configurados, **vuelve a esta página** y haz clic en "SINCRONIZAR" o "INSTALAR" para obtener el *resto* de addons.</li>
+                </ol>
+
+                <p>El ancho de banda necesario para Debrid es mucho menor y más estable:</p>
+                <ul>
+                    <li><strong>1080p (Alta Calidad):</strong> Requiere <strong>15-20 Mbps</strong> estables.</li>
+                    <li><strong>4K (UHD):</strong> Requiere <strong>~40-50 Mbps</strong> estables.</li>
+                </ul>
+            </div>
+
+            <hr style="border:0; border-top: 1px solid #E2E8F0; margin: 20px 0;">
+
+            <h4>Configuración General (Todos los Modos)</h4>
+            
+            <h4>1. OpenSubtitles PRO (Requerido)</h4>
+            <p>El addon de subtítulos más importante. Es gratuito pero requiere una cuenta.</p>
+            <ol>
+                <li>Ve a <code>opensubtitles.com</code> y crea una cuenta gratuita.</li>
+                <li>Haz clic en <code>(Configurar)</code> al lado de <strong>OpenSubtitles PRO</strong> en nuestra lista.</li>
+                <li>Ingresa el <strong>Email</strong> y <strong>Contraseña</strong> de la cuenta que creaste.</li>
+                <li>Haz clic en "Install".</li>
+            </ol>
+
+            <h4>2. Trakt TV (Recomendado)</h4>
+            <p>Para sincronizar tu historial de series y películas vistas.</p>
+            <ol>
+                <li>Haz clic en <code>(Configurar)</code> al lado de <strong>Trakt TV</strong>.</li>
+                <li>Serás llevado a la página de Trakt para autorizar el addon.</li>
+                <li>Inicia sesión en Trakt (o crea una cuenta) y acepta la conexión.</li>
+                <li>Haz clic en "Install" en la página del addon.</li>
+            </ol>
+        </div>
+
+        <button class="guide-toggle" id="guide-toggle-advanced">🛸 Alternativa Avanzada: AIOStreams (Ocultar/Mostrar)</button>
+        <div class="guide-content" id="guide-content-advanced">
+            <h4>¿Qué es AIOStreams?</h4>
+            <p>AIOStreams (All-In-One) es un addon "Todo-en-Uno" que intenta reemplazar a múltiples addons (Torrentio, Metadatos, Subtítulos) con una sola instalación. Es un proyecto impresionante pero muy complejo.</p>
+            
+            <div class="warning">
+                <strong>Advertencia:</strong> No instales AIOStreams al mismo tiempo que los addons de este panel (especialmente Torrentio y Comet). ¡Causarán conflictos! Úsalo solo si sabes lo que haces.
+            </div>
+            
+            <a href="https://aiostreams.elfhosted.com/" class="pro-link" target="_blank" rel="noopener noreferrer">Ir a la Configuración de AIOStreams</a>
+        </div>
+    </section>
+
+    <!-- PASO 5: ORGANIZAR -->
+    <section class="step">
+        <h2 class="step-title"><span>5</span>Paso Final: Organiza tu Stremio</h2>
+        <p>¡Felicidades! Ya tienes todo sincronizado. El último paso (y muy recomendado) es organizar tu pantalla de inicio.</p>
+        
+        <div class="guide-content" style="display: block; background-color: #F7FAFC; margin-top: 15px;">
+            <h4 style="margin-top: 0;">Herramienta: Stremio Addon Manager</h4>
+            <p>Esta es la herramienta más confiable de la comunidad para reordenar tus addons. Es segura y de código abierto.</p>
+            <ol>
+                <li>Haz clic en el enlace de abajo.</li>
+                <li>Inicia sesión con tu cuenta de Stremio (requerido para gestionar tu perfil).</li>
+                <li>Arrastra y suelta los addons. (Recomendamos poner <strong>Trakt</strong> y <strong>TMDB</strong> de primeros).</li>
+                <li>Haz clic en "Sync to Stremio".</li>
+            </ol>
+            <a href="https://stremio-addon-manager.pages.dev/" class="pro-link" target="_blank" rel="noopener noreferrer">Abrir el Organizador de Addons</a>
+        </div>
+    </section>
+
+    <!-- Footer semántico -->
+    <footer>
+        <p>Hecho con ❤️ en Caracas - Venezuela por <a href="http://lemustech.net" target="_blank" rel="noopener noreferrer">@Lemustech.ve</a></p>
+        <p>Esta herramienta no almacena, distribuye ni aloja ningún contenido.</p>
+    </footer>
+
+</main> <!-- Fin de .container -->
+
+<script>
+// --- REFACTOR: Base de Datos Híbrida (API y Pop-up) ---
+const allAddons = [
+    // Contenido (0-10)
+    { manifestUrl: "https://torrentio.strem.fun/manifest.json", installUrl: "stremio://install?url=https://torrentio.strem.fun/manifest.json", configUrl: "https://torrentio.strem.fun/configure", needsConfigPro: true },
+    { manifestUrl: "https://comet.elfhosted.com/manifest.json", installUrl: "stremio://install?url=https://comet.elfhosted.com/manifest.json" },
+    { manifestUrl: "https://mediafusion.elfhosted.com/manifest.json", installUrl: "stremio://install?url=https://mediafusion.elfhosted.com/manifest.json", configUrl: "https://mediafusion.elfhosted.com/configure", needsConfigPro: true },
+    { manifestUrl: "https://thepiratebay.stremio-addon.com/manifest.json", installUrl: "stremio://install?url=https://thepiratebay.stremio-addon.com/manifest.json" },
+    { manifestUrl: "https://nuvio.elfhosted.com/manifest.json", installUrl: "stremio://install?url=https://nuvio.elfhosted.com/manifest.json" },
+    { manifestUrl: "https://peerflix.elfhosted.com/manifest.json", installUrl: "stremio://install?url=https://peerflix.elfhosted.com/manifest.json" },
+    { manifestUrl: "https://webstreamrr.elfhosted.com/manifest.json", installUrl: "stremio://install?url=https://webstreamrr.elfhosted.com/manifest.json" },
+    { manifestUrl: "stremio://install/addon/eff2d348a08b6038ffa9efd3c2a39c096d2e76f5", installUrl: "stremio://install/addon/eff2d348a08b6038ffa9efd3c2a39c096d2e76f5" }, // 7 (YouTube)
+    { manifestUrl: "stremio://install/addon/1964809b84011312b237071f133c5d1d6049ed41", installUrl: "stremio://install/addon/1964809b84011312b237071f133c5d1d6049ed41" }, // 8 (Public Domain)
+    { manifestUrl: "https://pimpus.strem.fun/manifest.json", installUrl: "stremio://install?url=https://pimpus.strem.fun/manifest.json" },
+    { manifestUrl: "https://watchio.strem.fun/manifest.json", installUrl: "stremio://install?url=https://watchio.strem.fun/manifest.json" }, // 10
+    
+    // Metadatos (11-17)
+    { manifestUrl: "https://tmdb.elfhosted.com/manifest.json", installUrl: "stremio://install?url=https://tmdb.elfhosted.com/manifest.json" },
+    { manifestUrl: "https://trakt.strem.fun/manifest.json", installUrl: "stremio://install?url=https://trakt.strem.fun/manifest.json", configUrl: "https://trakt.strem.fun/configure", needsConfigAlways: true },
+    { manifestUrl: "https://ratings-aggregator.elfhosted.com/manifest.json", installUrl: "stremio://install?url=https://ratings-aggregator.elfhosted.com/manifest.json" },
+    { manifestUrl: "https://anime-kitsu.strem.fun/manifest.json", installUrl: "stremio://install?url=https://anime-kitsu.strem.fun/manifest.json" },
+    { manifestUrl: "https://aiolists.strem.fun/manifest.json", installUrl: "stremio://install?url=https://aiolists.strem.fun/manifest.json", configUrl: "https://aiolists.strem.fun/configure", needsConfigAlways: true },
+    { manifestUrl: "https://streaming-catalogs.stremio-addon.com/manifest.json", installUrl: "stremio://install?url=https://streaming-catalogs.stremio-addon.com/manifest.json" },
+    { manifestUrl: "https://more-like-this.stremio-addon.com/manifest.json", installUrl: "stremio://install?url=https://more-like-this.stremio-addon.com/manifest.json" }, // 17
+
+    // Subtítulos (18-22)
+    { manifestUrl: "https://opensubtitles-pro.stremio-addon.com/manifest.json", installUrl: "stremio://install?url=https://opensubtitles-pro.stremio-addon.com/manifest.json", configUrl: "https://opensubtitles-pro.stremio-addon.com/configure", needsConfigAlways: true },
+    { manifestUrl: "https://subsource-subtitles.stremio-addon.com/manifest.json", installUrl: "stremio://install?url=https://subsource-subtitles.stremio-addon.com/manifest.json" },
+    { manifestUrl: "https://msubtitles.stremio-addon.com/manifest.json", installUrl: "stremio://install?url=https://msubtitles.stremio-addon.com/manifest.json" },
+    { manifestUrl: "https://subdl-subtitles.stremio-addon.com/manifest.json", installUrl: "stremio://install?url=https://subdl-subtitles.stremio-addon.com/manifest.json" },
+    { manifestUrl: "stremio://install/addon/2bde0b5a19b3a0337c78bd9aee3930b8e4e101f3", installUrl: "stremio://install/addon/2bde0b5a19b3a0337c78bd9aee3930b8e4e101f3" }, // 22
+
+    // Addons PRO y nuevos (23-27)
+    { manifestUrl: "https://debridio.com/manifest.json", installUrl: "stremio://install?url=https://debridio.com/manifest.json", configUrl: "https://debridio.com/configure", needsConfigPro: true },
+    { manifestUrl: "stremio://install/addon/f01e6e58f08942e6aafc096b18c4d11019e0d161", installUrl: "stremio://install/addon/f01e6e58f08942e6aafc096b18c4d11019e0d161" }, // 24 (Trailers)
+    { manifestUrl: "stremio://install/addon/41b5ed0f61b05f4fed535a947fca54b633b469e0", installUrl: "stremio://install/addon/41b5ed0f61b05f4fed535a947fca54b633b469e0" }, // 25 (Documentaries)
+    { manifestUrl: "https://jam-packed.strem.fun/manifest.json", installUrl: "stremio://install?url=https://jam-packed.strem.fun/manifest.json" }, // 26
+    { manifestUrl: "https://cyberflix.strem.fun/manifest.json", installUrl: "stremio://install?url=https://cyberflix.strem.fun/manifest.json" }  // 27
+];
+
+
+// Addons a desactivar en Modo PRO
+const p2pAddonIndices = [1, 3, 4, 5, 6, 26];
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    // --- Selectores del DOM ---
+    const authKeyInput = document.getElementById('authKeyInput');
+    const modeStdBtn = document.getElementById('mode-std');
+    const modeProBtn = document.getElementById('mode-pro');
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabs = document.querySelectorAll('.tab');
+    const allCheckboxes = document.querySelectorAll('.addon input[type="checkbox"]');
+    const p2pAddons = document.querySelectorAll('.p2p-addon');
+    const proOnlyAddon = document.getElementById('debridio-addon');
+    
+    const installBtn = document.getElementById('install-btn');
+    const selectAllBtn = document.getElementById('select-all-btn');
+    const selectNoneBtn = document.getElementById('select-none-btn');
+    
+    const guideToggleMain = document.getElementById('guide-toggle-main');
+    const guideContentMain = document.getElementById('guide-content-main');
+    const guideStd = document.getElementById('guide-std');
+    const guidePro = document.getElementById('guide-pro');
+    
+    const guideToggleAdvanced = document.getElementById('guide-toggle-advanced');
+    const guideContentAdvanced = document.getElementById('guide-content-advanced');
+    
+    const statusEl = document.getElementById('status');
+    const step3Title = document.getElementById('step-3-title');
+    
+    let isProMode = false;
+    let isMobile = window.innerWidth <= 768;
+
+    // --- Lógica Híbrida ---
+    function checkDeviceMode() {
+        isMobile = window.innerWidth <= 768;
+        
+        if (isMobile) {
+            // Modo Móvil (Pop-ups)
+            document.getElementById('step1-desktop').style.display = 'none';
+            document.getElementById('step1-mobile').style.display = 'block';
+            installBtn.textContent = '⚡ INSTALAR SELECCIONADOS';
+            step3Title.textContent = 'Selecciona los Addons a Instalar';
+            installBtn.removeEventListener('click', syncAddons);
+            installBtn.addEventListener('click', installWithPopups);
+        } else {
+            // Modo Escritorio (AuthKey-Sync)
+            document.getElementById('step1-desktop').style.display = 'block';
+            document.getElementById('step1-mobile').style.display = 'none';
+            installBtn.textContent = '⚡ SINCRONIZAR AHORA';
+            step3Title.textContent = 'Selecciona los Addons a Sincronizar';
+            installBtn.removeEventListener('click', installWithPopups);
+            installBtn.addEventListener('click', syncAddons);
+        }
+    }
+    
+    // --- Inicialización ---
+    checkDeviceMode(); // Comprobar al cargar
+    window.addEventListener('resize', checkDeviceMode); // Comprobar si cambia tamaño
+    selectAllCheckboxes(); // Marcar todo por defecto
+
+    // --- Lógica de Modos ---
+    modeStdBtn.addEventListener('click', () => setMode('std'));
+    modeProBtn.addEventListener('click', () => setMode('pro'));
+
+    function setMode(mode) {
+        isProMode = (mode === 'pro');
+        
+        modeStdBtn.classList.toggle('active', !isProMode);
+        modeProBtn.classList.toggle('active', isProMode);
+        
+        guideStd.style.display = isProMode ? 'none' : 'block';
+        guidePro.style.display = isProMode ? 'block' : 'none';
+        
+        proOnlyAddon.style.display = isProMode ? 'block' : 'none';
+
+        p2pAddons.forEach(addonEl => {
+            const checkbox = addonEl.querySelector('input[type="checkbox"]');
+            if (isProMode) {
+                addonEl.classList.add('disabled');
+                checkbox.checked = false;
+                checkbox.disabled = true;
+            } else {
+                addonEl.classList.remove('disabled');
+                checkbox.disabled = false;
+                checkbox.checked = true;
+            }
+        });
+        
+        if (isProMode) {
+            proOnlyAddon.querySelector('input[type="checkbox"]').checked = true;
+        }
+
+        const message = isProMode 
+            ? "⚡ Modo PRO activado. Se desactivaron addons P2P redundantes."
+            : "🛡️ Modo Estándar activado. Se incluyeron todos los addons P2P.";
+        
+        showMessage(message, 'info');
+    }
+
+    // --- Lógica de Pestañas ---
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const tabIndex = button.getAttribute('data-tab');
+            
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.getElementById(`tab${tabIndex}`).classList.add('active');
+        });
+    });
+
+    // --- Lógica de Botones ---
+    selectAllBtn.addEventListener('click', selectAllCheckboxes);
+    selectNoneBtn.addEventListener('click', () => {
+        allCheckboxes.forEach(cb => {
+            if (!cb.disabled) cb.checked = false;
+        });
+        showMessage("Todos los addons deseleccionados.", 'info');
+    });
+
+    function selectAllCheckboxes() {
+        allCheckboxes.forEach(cb => {
+            if (!cb.disabled) cb.checked = true;
+        });
+        if (isProMode) {
+            proOnlyAddon.querySelector('input[type="checkbox"]').checked = true;
+        }
+        showMessage("Todos los addons visibles seleccionados.", 'info');
+    }
+
+    // --- Lógica de Sincronización (Desktop / AuthKey) ---
+    async function syncAddons() {
+        const authKey = authKeyInput.value;
+        
+        if (!authKey || !authKey.startsWith('stremio_')) {
+            showMessage("AuthKey inválida. Por favor, sigue la guía del Paso 1 para obtenerla.", 'error');
+            authKeyInput.focus();
+            return;
+        }
+
+        showMessage("⏳ Sincronizando addons...", 'info');
+        
+        const selectedCheckboxes = document.querySelectorAll('.addon input[type="checkbox"]:checked');
+        const manifestsToSync = [];
+        let configPagesToOpen = 0;
+
+        selectedCheckboxes.forEach(cb => {
+            if (cb.disabled) return;
+            
+            const urlIndex = parseInt(cb.getAttribute('data-url-index'), 10);
+            const addonData = allAddons[urlIndex];
+            if (!addonData) return;
+
+            const needsConfig = addonData.needsConfigAlways || (isProMode && addonData.needsConfigPro);
+
+            if (needsConfig && addonData.configUrl) {
+                window.open(addonData.configUrl, '_blank', 'noopener,noreferrer');
+                configPagesToOpen++;
+            } else if (addonData.manifestUrl && addonData.manifestUrl.startsWith('https://')) {
+                manifestsToSync.push(addonData.manifestUrl);
+            } else {
+                // Sincronizar addons oficiales (no se puede con API, usar pop-up)
+                if (addonData.installUrl) {
+                    window.open(addonData.installUrl);
+                    configPagesToOpen++;
+                }
+            }
+        });
+
+        if (manifestsToSync.length > 0) {
+            try {
+                const response = await fetch('https://api.strem.io/api/addonCollectionSet', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        authKey: authKey,
+                        collection: manifestsToSync
+                    })
+                });
+                const result = await response.json();
+                
+                if (result.success === true) {
+                    showMessage(`✅ ¡Éxito! ${manifestsToSync.length} addons sincronizados. Se abrieron ${configPagesToOpen} pestañas para configuración manual.`, 'success');
+                } else {
+                    throw new Error(result.error || 'Respuesta desconocida de la API');
+                }
+            } catch (error) {
+                console.error('Error al sincronizar:', error);
+                showMessage(`Error de Sincronización: ${error.message}. ¿Revisaste tu AuthKey?`, 'error');
+            }
+        } else if (configPagesToOpen > 0) {
+            showMessage(`Se abrieron ${configPagesToOpen} pestañas para config. manual. No se sincronizó nada automáticamente.`, 'info');
+        } else {
+            showMessage("No se seleccionó ningún addon para sincronizar.", 'info');
+        }
+    }
+    
+    // --- Lógica de Instalación (Móvil / Pop-ups) ---
+    function installWithPopups() {
+        const selectedCheckboxes = document.querySelectorAll('.addon input[type="checkbox"]:checked');
+        let addonsToInstall = 0;
+        let configPagesToOpen = 0;
+
+        showMessage("Iniciando instalación... Por favor, PERMITE las ventanas emergentes (pop-ups) en tu navegador.", 'info');
+
+        selectedCheckboxes.forEach(cb => {
+            if (cb.disabled) return;
+
+            const urlIndex = parseInt(cb.getAttribute('data-url-index'), 10);
+            const addonData = allAddons[urlIndex];
+            if (!addonData) return;
+
+            const needsConfig = addonData.needsConfigAlways || (isProMode && addonData.needsConfigPro);
+
+            if (needsConfig && addonData.configUrl) {
+                // Abrir página de configuración
+                window.open(addonData.configUrl, '_blank', 'noopener,noreferrer');
+                configPagesToOpen++;
+            } else if (addonData.installUrl) {
+                // Abrir enlace de instalación
+                window.open(addonData.installUrl);
+                addonsToInstall++;
+            }
+        });
+
+        if (addonsToInstall > 0 || configPagesToOpen > 0) {
+            showMessage(`✅ Instalación iniciada. Se abrieron ${configPagesToOpen} pestañas de config. y ${addonsToInstall} instalaciones.`, 'success');
+        } else {
+            showMessage("No se seleccionó ningún addon para instalar.", 'info');
+        }
+    }
+
+    // --- Lógica de Guías ---
+    guideToggleMain.addEventListener('click', () => {
+        const isActive = guideContentMain.style.display === 'block';
+        guideContentMain.style.display = isActive ? 'none' : 'block';
+        guideToggleMain.classList.toggle('active', !isActive);
+    });
+    
+    guideToggleAdvanced.addEventListener('click', () => {
+        const isActive = guideContentAdvanced.style.display === 'block';
+        guideContentAdvanced.style.display = isActive ? 'none' : 'block';
+        guideToggleAdvanced.classList.toggle('active', !isActive);
+    });
+
+    // --- Función de Mensajes ---
+    function showMessage(text, type) {
+        statusEl.textContent = text;
+        statusEl.className = "status " + type;
+    }
+});
+</script>
+
+</body>
+</html>
